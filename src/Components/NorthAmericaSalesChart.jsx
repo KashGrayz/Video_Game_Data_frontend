@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Chart } from "react-google-charts";
 
 
-const GlobalSalesChart = ({games}) => {
+const NorthAmericaSalesChart = ({games}) => {
 
     function findChartData(){
 
         console.log(games)
 
-        let filteredGames = games.filter(game => game.year >= 2013);
+        let filteredGames = games.filter(game => game.year <= 2000);
 
         console.log("Filtered Games", filteredGames )
 
@@ -27,12 +27,12 @@ const GlobalSalesChart = ({games}) => {
 
             let globalSales = 0
             for (let i =0; i < allGamesForPlatform.length; i++){
-                globalSales += allGamesForPlatform[i].globalsales
+                globalSales += allGamesForPlatform[i].northamericasales
             }
             console.log(globalSales)
             
 
-            return [platform, globalSales, "blue"]
+            return [platform, globalSales, "red"]
         });
 
         console.log('Platform Arrays', platformArrays )
@@ -50,9 +50,9 @@ const GlobalSalesChart = ({games}) => {
     
     return ( 
         <div>
-            <h1>Platform By Global Sales in Millions</h1>
+            <h1>Platform By North America Sales pre-2000 in Millions</h1>
             <Chart chartType="ColumnChart" width="100%" height="400px" data={findChartData()} />
         </div>
      );
 }
-export default GlobalSalesChart;
+export default NorthAmericaSalesChart;

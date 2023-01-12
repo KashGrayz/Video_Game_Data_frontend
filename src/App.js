@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import GlobalSalesChart from './Components/GlobalSalesChart/GlobalSalesChart';
 import axios from 'axios';
+import NorthAmericaSalesChart from './Components/NorthAmericaSalesChart';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
   return (
     <div>
       <GlobalSalesChart games={games}/>
+      <NorthAmericaSalesChart games={games}/>
     </div>
   );
 }
