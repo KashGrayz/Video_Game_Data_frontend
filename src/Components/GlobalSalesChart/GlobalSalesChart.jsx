@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Chart } from "react-google-charts";
 
 
@@ -23,7 +23,7 @@ const GlobalSalesChart = ({games}) => {
         console.log('Distinct Platforms', distinctPlatforms)
 
         let platformArrays = distinctPlatforms.map(platform => {
-            let allGamesForPlatform = filteredGames.filter(game => game.platform == platform);
+            let allGamesForPlatform = filteredGames.filter(game => game.platform === platform);
 
             let globalSales = 0
             for (let i =0; i < allGamesForPlatform.length; i++){
