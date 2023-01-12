@@ -1,5 +1,6 @@
 import React from 'react';
 import { Chart } from "react-google-charts";
+import '../GlobalSalesChart/GlobalSalesChart.css'
 
 
 const GlobalSalesChart = ({games}) => {
@@ -32,7 +33,7 @@ const GlobalSalesChart = ({games}) => {
             console.log(globalSales)
             
 
-            return [platform, globalSales, "blue"]
+            return [platform, globalSales, "rgb(62,240,252)"]
         });
 
         console.log('Platform Arrays', platformArrays )
@@ -49,9 +50,9 @@ const GlobalSalesChart = ({games}) => {
     }
     
     return ( 
-        <div>
-            <h1>Platform By Global Sales in Millions</h1>
-            <Chart chartType="ColumnChart" width="100%" height="400px" data={findChartData()} />
+        <div >
+            <h1 className='chart'>Platform By Global Sales in Millions</h1>
+            <Chart chartType="ColumnChart" width="100%" height="400px"  data={findChartData()} />
         </div>
      );
 }

@@ -10,7 +10,6 @@ const SearchBar = ({ games, setGameIds }) => {
     let filteredGames = games.filter((game) =>
       game.name.toLowerCase().includes(searchInput)
     );
-    debugger;
     console.log("Filtered Games: ", filteredGames);
     setFilterGames(filteredGames);
     let filteredGameIds = filteredGames.map((game) => game.id);
@@ -27,7 +26,7 @@ const SearchBar = ({ games, setGameIds }) => {
         ></input>
         <button type="submit">SEARCH</button>
       </form>
-      <div>
+      <div className="FilteredSearches">
         {filteredSearch.map((game, index) => {
           return (
             <div key={index}>
