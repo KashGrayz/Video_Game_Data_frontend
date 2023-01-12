@@ -1,12 +1,17 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
-import GlobalSalesGames from './Components/GlobalSalesChart/GlobalSalesChart';
+import React, { useState, useEffect } from 'react';
+import GlobalSalesChart from './Components/GlobalSalesChart/GlobalSalesChart';
 import axios from 'axios';
 
 
 function App() {
-
   const [games, setGames] = useState([]);
+
+  async function getGames(){
+      let response = await axios.get('http://localhost:8080/all');
+      setGames(response.data);
+  }
+
 
     useEffect(()=>{
         getGames();
@@ -25,12 +30,10 @@ function App() {
 
     
   return (
-      <div>
-        <GlobalSalesGames games={games}/>
-      </div>
-    );
-
-
+    <div>
+      <GlobalSalesChart games={games}/>
+    </div>
+  );
 }
 
   
