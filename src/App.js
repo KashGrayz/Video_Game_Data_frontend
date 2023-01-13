@@ -3,13 +3,14 @@ import React, { useState, useEffect } from 'react';
 import GlobalSalesChart from './Components/GlobalSalesChart/GlobalSalesChart';
 import axios from 'axios';
 import NorthAmericaSalesChart from './Components/NorthAmericaSalesChart/NorthAmericaSalesChart';
-import SearchBar from './Components/SearchBar/SearchBar';
 import Navbar from './Components/NavBar/Navbar';
+import SearchResults from './Components/SearchResults/SearchResults';
 
 function App() {
   const [games, setGames] = useState([]);
   const [game, setGame] = useState([]);
   const [gameIds, setGameIds] = useState([])
+  const [filteredSearch, setFilteredSearch] = useState([])
 
   async function getGames(){
       let response = await axios.get('http://localhost:8080/all');
@@ -29,10 +30,11 @@ function App() {
     
   return (
     <div>
-      <Navbar/>
+      <Navbar games={games} setGameIds={setGameIds} setFilteredSearch={setFilteredSearch}/>
       <GlobalSalesChart games={games}/>
       <NorthAmericaSalesChart games={games}/>
-      <SearchBar games={games} setGameIds={setGameIds}/>
+      <br></br>
+      <SearchResults filteredSearch={filteredSearch}/>
     </div>
   );
 }

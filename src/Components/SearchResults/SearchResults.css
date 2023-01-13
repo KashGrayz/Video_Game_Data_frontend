@@ -1,0 +1,13 @@
+.FilteredSearches{
+    height: 35vh;
+    overflow: auto;
+}
+
+.SearchResultsTable{
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchResultTable{
+    display: flex;
+}

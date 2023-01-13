@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './SearchBar.css';
 
-const SearchBar = ({ games, setGameIds }) => {
+const SearchBar = ({ games, setGameIds, setFilteredSearch }) => {
   const [searchInput, setSearchInput] = useState([]);
   const [filteredSearch, setFilterGames] = useState([]);
 
@@ -12,9 +12,9 @@ const SearchBar = ({ games, setGameIds }) => {
     );
     console.log("Filtered Games: ", filteredGames);
     setFilterGames(filteredGames);
-    debugger;
     let filteredGameIds = filteredGames.map((game) => game.id);
     setGameIds(filteredGameIds);
+    setFilteredSearch(filteredGames);
   }
 
   return (
@@ -27,19 +27,6 @@ const SearchBar = ({ games, setGameIds }) => {
         ></input>
         <button type="submit">SEARCH</button>
       </form>
-      <div className="FilteredSearches">
-        {filteredSearch.map((game, index) => {
-          return (
-            <div key={index}>
-              <div>Name: {game.name}</div>
-              <div>Rank: {game.game_rank}</div>
-              <div>Platform: {game.platform}</div>
-              <div>Genre: {game.genre}</div>
-              <br></br>
-            </div>
-          );
-        })}
-      </div>
     </div>
   );
 };

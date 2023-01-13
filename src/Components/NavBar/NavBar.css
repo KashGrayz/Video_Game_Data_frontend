@@ -5,7 +5,7 @@ ul {
     text-shadow: 10px,10px,rgb(0, 0, 0);
   }
   
-  li {
+li {
     display: flex;
     align-items: center;
     font-size: 4rem;
@@ -13,7 +13,7 @@ ul {
     text-shadow: 2px 2px 5px rgb(6, 44, 48);
   }
   
-  .navBar {
+.navBar {
     background: #941dd95a;
     box-shadow: 4px 2px 5px gray;
     color: white;
@@ -22,13 +22,13 @@ ul {
     
     height: 4rem;
   }
-  .brand {
+.brand {
     cursor: pointer;
     font-size: 2rem;
     padding-left: 2rem;
   }
   
-  .nav{
+.nav{
     color :rgb(1, 234, 255); 
     
   }
