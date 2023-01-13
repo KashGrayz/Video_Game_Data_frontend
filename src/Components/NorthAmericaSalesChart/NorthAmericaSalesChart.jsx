@@ -8,7 +8,7 @@ const NorthAmericaSalesChart = ({games}) => {
 
         console.log(games)
 
-        let filteredGames = games.filter(game => game.year <= 2000);
+        let filteredGames = games.filter(game => game.year >= 1980 && game.year <= 2016);
 
         console.log("Filtered Games", filteredGames )
 
@@ -24,22 +24,32 @@ const NorthAmericaSalesChart = ({games}) => {
 
         let platformArrays = distinctPlatforms.map(platform => {
             let allGamesForPlatform = filteredGames.filter(game => game.platform === platform);
-
             let globalSales = 0
             for (let i =0; i < allGamesForPlatform.length; i++){
                 globalSales += allGamesForPlatform[i].northamericasales
             }
             console.log(globalSales)
-            
 
+            
             return [platform, globalSales, "rgb(163, 13, 213)"]
         });
 
-        console.log('Platform Arrays', platformArrays )
+        
+
+        
+
+        console.log('Platform Arrays', platformArrays)
+
+        let filteredPlatformArrays = platformArrays.filter(array => array[1] <= 200 && array[1] >= 50)
+
+        console.log('Platform Arrays', filteredPlatformArrays)
 
         const data = [
+
         ["Platform", "Sales", { role: "style" }],
-        ...platformArrays
+
+        ...filteredPlatformArrays
+
         ];
 
         console.log('Data', data)
@@ -50,7 +60,7 @@ const NorthAmericaSalesChart = ({games}) => {
     
     return ( 
         <div>
-            <h1 className='chart'>Platform By North America Sales pre-2000 in Millions</h1>
+            <h1 className='chart'>Platform By North America Sales (Between 50 & 200 Millions)</h1>
             <Chart chartType="ColumnChart" width="100%" height="400px" data={findChartData()} />
         </div>
      );

@@ -1,4 +1,6 @@
 .chart{
     display: flex;
     justify-content: space-around;
+    text-shadow: 2px 2px 5px rgb(6, 44, 48);
+    margin: 2rem;
   }

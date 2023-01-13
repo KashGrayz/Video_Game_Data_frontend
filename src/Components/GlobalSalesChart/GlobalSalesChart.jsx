@@ -52,7 +52,7 @@ const GlobalSalesChart = ({games}) => {
     return ( 
         <div >
             <h1 className='chart'>Platform By Global Sales in Millions</h1>
-            <Chart chartType="ColumnChart" width="100%" height="400px"  data={findChartData()} />
+            <Chart chartType="ColumnChart" width="100%" height="400px" legend={'position:bottom'} data={findChartData()} />
         </div>
      );
 }

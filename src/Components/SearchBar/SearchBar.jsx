@@ -12,6 +12,7 @@ const SearchBar = ({ games, setGameIds }) => {
     );
     console.log("Filtered Games: ", filteredGames);
     setFilterGames(filteredGames);
+    debugger;
     let filteredGameIds = filteredGames.map((game) => game.id);
     setGameIds(filteredGameIds);
   }

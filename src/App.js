@@ -4,7 +4,7 @@ import GlobalSalesChart from './Components/GlobalSalesChart/GlobalSalesChart';
 import axios from 'axios';
 import NorthAmericaSalesChart from './Components/NorthAmericaSalesChart/NorthAmericaSalesChart';
 import SearchBar from './Components/SearchBar/SearchBar';
-
+import Navbar from './Components/NavBar/Navbar';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -29,6 +29,7 @@ function App() {
     
   return (
     <div>
+      <Navbar/>
       <GlobalSalesChart games={games}/>
       <NorthAmericaSalesChart games={games}/>
       <SearchBar games={games} setGameIds={setGameIds}/>
