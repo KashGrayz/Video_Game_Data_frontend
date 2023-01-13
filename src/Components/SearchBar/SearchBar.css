@@ -12,4 +12,14 @@
     background-color: rgb(163, 13, 213);
     color: white;
     padding: 0.25rem 0.25rem;
+    border: transparent;
+}
+
+.sbutton:hover{
+    background-color:rgba(100, 7, 131, 0.983) ;
+}
+
+.iform{
+    width: 12rem;
+    
 }

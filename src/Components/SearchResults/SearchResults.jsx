@@ -1,19 +1,20 @@
 import React from 'react';
+
 import './SearchResults.css';
 
 const SearchResults = ({filteredSearch}) => {
-    return ( 
-        <div>
+    return (
+        <div className="FilteredSearches">
             <table>
                 <thead>
-                    <tr>
-                        <th>NAME</th>
-                        <th>RANK</th>
-                        <th>PLATFORM</th>
-                        <th>GENRE</th>
+                    <tr className='TableHeaders'>
+                        <td>NAME</td>
+                        <td>RANK</td>
+                        <td>PLATFORM</td>
+                        <td>GENRE</td>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody >
                     {filteredSearch.map((game, index) => {
                         return (
                             <tr key={index}>
@@ -29,5 +30,4 @@ const SearchResults = ({filteredSearch}) => {
         </div>
      );
 }
- 
 export default SearchResults;

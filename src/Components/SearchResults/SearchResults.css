@@ -1,13 +1,30 @@
 .FilteredSearches{
+    display: flex;
     height: 35vh;
     overflow: auto;
+    justify-content: center;
+}
+.TableHeaders{
+    justify-content: left;
+    font-weight: bold;
+    background-color: #000000a7;
+    color: white;
 }
 
-.SearchResultsTable{
-    display: flex;
-    justify-content: space-between;
-}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+  }
+  
+  td, th {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddda4;
+  }
 
-.searchResultTable{
-    display: flex;
-}
+ 
