@@ -5,22 +5,25 @@ ul {
     text-shadow: 10px,10px,rgb(0, 0, 0);
   }
   
-li {
+div li {
     display: flex;
-    align-items: center;
     font-size: 4rem;
     padding: 1rem;
     text-shadow: 2px 2px 5px rgb(6, 44, 48);
+    align-items: center;
   }
   
 .navBar {
+    width: 100%;
+    overflow: hidden;
     background: #941dd95a;
-    box-shadow: 4px 2px 5px gray;
+    box-shadow: 0px 2px 10px rgb(0, 0, 0);
     color: white;
     margin-bottom: 3rem;
     padding: .5rem 1rem;
-    
-    height: 4rem;
+    height: 5rem;
+    top: 0;
+    z-index: 1;
   }
 .brand {
     cursor: pointer;
@@ -32,3 +35,9 @@ li {
     color :rgb(1, 234, 255); 
     
   }
+
+  .flex-container{
+    display: flex;
+  
+  }
+

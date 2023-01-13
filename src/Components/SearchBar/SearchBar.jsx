@@ -19,13 +19,14 @@ const SearchBar = ({ games, setGameIds, setFilteredSearch }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="search" onSubmit={handleSubmit}>
         <input
           type="string"
+          placeholder="Search games.."
           value={searchInput}
           onChange={(event) => setSearchInput(event.target.value)}
         ></input>
-        <button type="submit">SEARCH</button>
+        <button type="submit" className="sbutton">SEARCH</button>
       </form>
     </div>
   );

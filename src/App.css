@@ -7,9 +7,9 @@
 }
 
 body{
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(62, 240, 252); /* For browsers that do not support gradients */
     background-image: linear-gradient(to bottom right, rgb(62,240,252), rgb(163, 13, 213)); 
-    font-family: Tahoma,Verdana,Segoe,sans-serif;
-    
 }
 

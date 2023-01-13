@@ -2,3 +2,14 @@
     height: 35vh;
     overflow: auto;
 }
+
+.search{
+
+    display: flex;
+}
+
+.sbutton{
+    background-color: rgb(163, 13, 213);
+    color: white;
+    padding: 0.25rem 0.25rem;
+}

@@ -4,11 +4,11 @@ import SearchBar from "../SearchBar/SearchBar";
 
 const Navbar = ({games, setGameIds, setFilteredSearch}) => {
     return (
-      <div>
+      <div className="flex-container">
         <div className="navBar">
           <ul>
             <li className="brand">
-                <b className='nav'>Gamer</b><b className='nav'>Data</b>
+                <b className='nav'>GamerData</b>
             </li>
             <li>
               <SearchBar games={games} setGameIds={setGameIds} setFilteredSearch={setFilteredSearch}/>

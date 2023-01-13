@@ -3,8 +3,8 @@ import './SearchResults.css';
 
 const SearchResults = ({filteredSearch}) => {
     return ( 
-        <div className='searchResultTable'>
-            <table className='SearchResultsTable'>
+        <div>
+            <table>
                 <thead>
                     <tr>
                         <th>NAME</th>
@@ -13,7 +13,7 @@ const SearchResults = ({filteredSearch}) => {
                         <th>GENRE</th>
                     </tr>
                 </thead>
-                <tbody className="FilteredSearches">
+                <tbody>
                     {filteredSearch.map((game, index) => {
                         return (
                             <tr key={index}>
