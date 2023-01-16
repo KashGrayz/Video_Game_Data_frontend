@@ -36,7 +36,7 @@ const StatsPage = (props) => {
 
     const options = {
     title: `${game.name} Sales For Each Region`,
-    chartArea: { width: "60%" },
+    chartArea: { width: "80%" },
     legend: {role: 'style', textStyle: {color: 'black', fontSize: 'bold'}},
     colors: ['#65f3fd'],
     hAxis: {
@@ -52,14 +52,15 @@ const StatsPage = (props) => {
     return ( 
         <div className='statspage'>
             <Navbar/>
-            <button className='returnb'><Link to="/">HomePage</Link></button>
             <Chart
+            className='percent'
             chartType="BarChart"
-            width="100%"
-            height="400px"
+            width="86.7%"
+            height="600px"
             data={data}
             options={options}
             />
+            <button className='returnb'><Link to="/">HomePage</Link></button>
         </div>
      );
 }

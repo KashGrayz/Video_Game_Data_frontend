@@ -3,6 +3,7 @@
     height: 35vh;
     overflow: auto;
     justify-content: center;
+    
 }
 .TableHeaders{
     justify-content: left;
@@ -32,6 +33,8 @@ table {
     color: rgb(255, 255, 255);
     padding: 0.25rem 0.25rem;
     border: transparent;
+    
+    
 }
 
 .statbutton:hover{
