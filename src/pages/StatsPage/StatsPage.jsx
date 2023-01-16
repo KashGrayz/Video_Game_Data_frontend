@@ -3,7 +3,8 @@ import './StatsPage.css';
 import { useLocation, Link } from 'react-router-dom';
 import axios from 'axios';
 import { Chart } from "react-google-charts";
-
+import "../StatsPage/StatsPage.css"
+import Navbar from '../../Components/NavBar/Navbar';
 
 const StatsPage = (props) => {
     const location = useLocation()
@@ -24,8 +25,8 @@ const StatsPage = (props) => {
 
 
     const data = [
-    ["Region", "Sales", ],
-    ["NA", game.northamericasales],
+    ["Region", "Sales"],
+    ["NA", game.northamericasales,],
     ["JP",game.japansales],
     ["EU", game.europesales],
     ["GLOBAL",game.globalsales],
@@ -47,7 +48,9 @@ const StatsPage = (props) => {
 
 
     return ( 
-        <div>
+        <div className='statspage'>
+            <Navbar/>
+            <button className='returnb'><Link to="/">Return to HomePage</Link></button>
             <Chart
             chartType="BarChart"
             width="100%"
@@ -55,7 +58,6 @@ const StatsPage = (props) => {
             data={data}
             options={options}
             />
-            <button><Link to="/">Return to HomePage</Link></button>
         </div>
      );
 }
