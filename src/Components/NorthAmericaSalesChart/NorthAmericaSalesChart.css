@@ -3,3 +3,10 @@
     justify-content: space-around;
     color: white;
   }
+
+.percent{
+  margin-left: auto;
+  justify-content: center;
+  position: relative;
+  left: 12px;
+}

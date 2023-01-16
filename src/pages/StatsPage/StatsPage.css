@@ -10,8 +10,8 @@
 .returnb{
     background-color:rgb(62, 240, 252);
     padding: 0.25rem 0.25rem;
-    border: solid;
-    border-color: white;
+    border: solid 1px;
+    border-color: rgb(0, 0, 0);
     margin: 2rem;
     text-align: center;
 }

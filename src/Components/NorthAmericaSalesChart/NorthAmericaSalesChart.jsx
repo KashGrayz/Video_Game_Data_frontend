@@ -57,11 +57,20 @@ const NorthAmericaSalesChart = ({games}) => {
         return data;
 
     }
+
+    const options = {
+        chartArea: { width: "80%" },
+        legend: {position: 'bottom', role: 'style', textStyle: {color: 'black', fontSize: 'bold'}},
+        colors: ['#a30dd5'],
+        hAxis: {
+            minValue: 0,
+        },
+    };
     
     return ( 
         <div>
             <h1 className='chart'>Platform By North America Sales (Between 50 & 200 Millions)</h1>
-            <Chart chartType="ColumnChart" width="100%" height="400px" data={findChartData()} />
+            <Chart className='percent' chartType="ColumnChart" width="86.7%" height="400px" options={options} data={findChartData()} />
         </div>
      );
 }

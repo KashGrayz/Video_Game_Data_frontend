@@ -52,7 +52,7 @@ const StatsPage = (props) => {
     return ( 
         <div className='statspage'>
             <Navbar/>
-            <button className='returnb'><Link to="/">Return to HomePage</Link></button>
+            <button className='returnb'><Link to="/">HomePage</Link></button>
             <Chart
             chartType="BarChart"
             width="100%"

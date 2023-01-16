@@ -45,14 +45,22 @@ const GlobalSalesChart = ({games}) => {
 
         console.log('Data', data)
 
-        return data;
-
+        return data;  
     }
+
+    const options = {
+        chartArea: { width: "80%" },
+        legend: {position: 'bottom', role: 'style', textStyle: {color: 'black', fontSize: 'bold'}},
+        colors: ['#65f3fd'],
+        hAxis: {
+            minValue: 0,
+        },
+    };
     
     return ( 
         <div >
             <h1 className='chart'>Platform By Global Sales in Millions</h1>
-            <Chart chartType="ColumnChart" width="100%" height="400px" legend={'position:bottom'} data={findChartData()} />
+            <Chart className='percent' chartType="ColumnChart" width="86.7%" height="400px" options={options} data={findChartData()} />
         </div>
      );
 }
