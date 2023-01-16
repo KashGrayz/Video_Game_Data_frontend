@@ -8,15 +8,16 @@
     display: flex;
 }
 
-.sbutton{
+.searchbutton{
     background-color: rgb(163, 13, 213);
     color: white;
     padding: 0.25rem 0.25rem;
     border: transparent;
 }
 
-.sbutton:hover{
+.searchbutton:hover{
     background-color:rgba(100, 7, 131, 0.983) ;
+    cursor: pointer;
 }
 
 .iform{

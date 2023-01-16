@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './SearchBar.css';
 
-const SearchBar = ({ games, setGameIds, setFilteredSearch }) => {
+const SearchBar = ({ games, setFilteredSearch }) => {
   const [searchInput, setSearchInput] = useState([]);
   
 
@@ -11,8 +11,6 @@ const SearchBar = ({ games, setGameIds, setFilteredSearch }) => {
       game.name.toLowerCase().includes(searchInput)
     );
     console.log("Filtered Games: ", filteredGames);
-    let filteredGameIds = filteredGames.map((game) => game.id);
-    setGameIds(filteredGameIds);
     setFilteredSearch(filteredGames);
   }
 
@@ -26,7 +24,7 @@ const SearchBar = ({ games, setGameIds, setFilteredSearch }) => {
           value={searchInput}
           onChange={(event) => setSearchInput(event.target.value)}
         ></input>
-        <button type="submit" className="sbutton">SEARCH</button>
+        <button type="submit" className="searchbutton">SEARCH</button>
       </form>
     </div>
   );

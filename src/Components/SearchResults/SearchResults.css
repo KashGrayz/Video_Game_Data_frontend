@@ -27,4 +27,15 @@ table {
     background-color: #dddddda4;
   }
 
+  .statbutton{
+    background-color: #000000d5;
+    color: rgb(255, 255, 255);
+    padding: 0.25rem 0.25rem;
+    border: transparent;
+}
+
+.statbutton:hover{
+    background-color:#00000096 ;
+    cursor: pointer;
+}
  

@@ -2,7 +2,7 @@ import React from "react";
 import "./NavBar.css";
 import SearchBar from "../SearchBar/SearchBar";
 
-const Navbar = ({games, setGameIds, setFilteredSearch}) => {
+const Navbar = ({games, setFilteredSearch}) => {
     return (
       <div className="flex-container">
         <div className="navBar">
@@ -11,7 +11,7 @@ const Navbar = ({games, setGameIds, setFilteredSearch}) => {
                 <b className='nav'>GamerData</b>
             </li>
             <li>
-              <SearchBar games={games} setGameIds={setGameIds} setFilteredSearch={setFilteredSearch}/>
+              <SearchBar games={games} setFilteredSearch={setFilteredSearch}/>
             </li>
           </ul>
         </div>

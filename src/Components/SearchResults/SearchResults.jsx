@@ -1,8 +1,15 @@
 import React from 'react';
-
 import './SearchResults.css';
+import { useNavigate } from 'react-router-dom';
 
 const SearchResults = ({filteredSearch}) => {
+    const navigate = useNavigate()
+
+    function handleSubmit(game){
+        console.log(game.id)
+        navigate('/statspage', { state : {id:game.id}})
+    }
+
     return (
         <div className="FilteredSearches">
             <table>
@@ -12,6 +19,7 @@ const SearchResults = ({filteredSearch}) => {
                         <td>RANK</td>
                         <td>PLATFORM</td>
                         <td>GENRE</td>
+                        <td>INFO</td>
                     </tr>
                 </thead>
                 <tbody >
@@ -22,6 +30,7 @@ const SearchResults = ({filteredSearch}) => {
                                 <td>{game.game_rank}</td>
                                 <td>{game.platform}</td>
                                 <td>{game.genre}</td>
+                                <td onClick={()=>handleSubmit(game)}><button className='statbutton'>Stats</button></td>
                             </tr>
                         );
                     })}
