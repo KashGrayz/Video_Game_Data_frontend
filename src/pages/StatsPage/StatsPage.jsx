@@ -25,18 +25,20 @@ const StatsPage = (props) => {
 
 
     const data = [
-    ["Region", "Sales"],
-    ["NA", game.northamericasales,],
-    ["JP",game.japansales],
-    ["EU", game.europesales],
-    ["GLOBAL",game.globalsales],
-    ["OTHER",game.othersales],
+    ["Region", "Sales", { role: "style" }],
+    ["NA", game.northamericasales, '#65f3fd'],
+    ["JP",game.japansales, '#a30dd5'],
+    ["EU", game.europesales, '#65f3fd'],
+    ["GLOBAL",game.globalsales, '#a30dd5'],
+    ["OTHER",game.othersales, '#65f3fd'],
     ];
 
 
     const options = {
     title: `${game.name} Sales For Each Region`,
     chartArea: { width: "60%" },
+    legend: {role: 'style', textStyle: {color: 'black', fontSize: 'bold'}},
+    colors: ['#65f3fd'],
     hAxis: {
         title: "Total Sales in Millions",
         minValue: 0,

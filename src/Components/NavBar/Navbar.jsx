@@ -1,6 +1,7 @@
 import React from "react";
 import "./NavBar.css";
 import SearchBar from "../SearchBar/SearchBar";
+import { Link } from "react-router-dom";
 
 const Navbar = ({games, setFilteredSearch}) => {
     return (
@@ -8,7 +9,7 @@ const Navbar = ({games, setFilteredSearch}) => {
         <div className="navBar">
           <ul>
             <li className="brand">
-                <b className='nav'>GamerData</b>
+              <Link to="/"><b className='nav'>GamerData</b></Link>
             </li>
             <li>
               <SearchBar games={games} setFilteredSearch={setFilteredSearch}/>
